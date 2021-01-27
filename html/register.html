@@ -1,43 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Registration Form</title>
-<link rel="stylesheet" href="/css/register.css">
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="/css/register.css">
+        <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/jsfiles/register.js"></script>
+   </head>
 <div class="wrapper">
     <div class="image">
-        <img src="/assests/employee.png" alt="employee logo " >
+        <img src="/assests/employee.png" alt="employee logo ">
     </div>
     
     <div class="title">
         Registration Form
     </div>
-    <div class="form">
+    <form class="form" onsubmit="register(event); return false">
         <div class="input_field">
-            <label >First Name</label>
-            <input type="text" class="input" placeholder="Enter your firstName">
+            <label>First Name</label>
+            <input type="text" id="fname" class="input" name="firstname" placeholder="enter FirstName">
         </div>
         <div class="input_field">
             <label >Last Name</label>
-            <input type="text" class="input" placeholder="Enter your LastName">
+            <input type="text" id="lname" class="input" name="lastname" placeholder="enter FirstName">
         </div>
         <div class="input_field">
             <label >Email</label>
-            <input type="text" class="input" placeholder="Enter your Email">
+            <input id="email"  type="text" class="input" placeholder="Enter your Email">
         </div>
         <div class="input_field">
             <label >Salary</label>
-            <input type="number" class="input" placeholder="Enter your Salary">
+            <input id="sallary" type="number" class="input" placeholder="Enter your Salary">
         </div>
         <div class="input_field">
             <label >Department</label>
-            <input type="text" class="input" placeholder="Enter your Department ">
+            <input id="department" type="text" class="input" placeholder="Enter your Department ">
         </div>
         <div class="input_field">
             <input type="submit" value="Register" class="btn">
         </div>
-    </div>
+    </form>
 </div>
 </html>

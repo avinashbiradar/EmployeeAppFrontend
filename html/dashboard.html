@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -7,20 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/dashboard.css">
     <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
-    <script type="text/javascript" src="../JavaScript/Dashboard.js"></script>
-</head>
+    <script src="/jsfiles/dashboard.js"></script>
+  </head>
 
 <body>
-    <h2><b> EMPLOYEE MANAGEMENT SYSTEM</b></h2>
+    <h2 class="head"><b> EMPLOYEE MANAGEMENT SYSTEM</b></h2>
     <div class="image">
         <a href="register.html" >
             <img  alt="Add employee" src="/assests/addEmployee.png" width="100" height="100" >
         </a>
     </div>
-    <table class="table">
+    <table  class="table" id="customers">
         <thead class="thead-dark">
           <tr>
-            <th scope="col">#</th>
             <th scope="col">First</th>
             <th scope="col">Last</th>
             <th scope="col">Email</th>
@@ -31,18 +31,7 @@
             
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td>@mdo</td>
-            <td> <button type="button" class="btn btn-warning">Edit</button></td>
-            <td> <button type="button" class="btn btn-danger">Delete</button></td>
-          </tr>
-        </tbody>
+
       </table>
 </body>
 

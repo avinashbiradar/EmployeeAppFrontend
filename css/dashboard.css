@@ -8,5 +8,8 @@ body{
 }
 .image{
   padding-bottom: 15px;
+  text-align: left;
+}
+.head{
   text-align: center;
 }
