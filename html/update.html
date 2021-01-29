@@ -6,6 +6,7 @@
         <title>Registration Form</title>
         <link rel="stylesheet" href="/css/register.css">
         <script src="http://code.jquery.com/jquery-3.5.1.js"></script>
+        <script src="/jsfiles/update.js"></script>
         <script src="/jsfiles/register.js"></script>
    </head>
 <div class="wrapper">
@@ -16,7 +17,7 @@
     <div class="title">
         Registration Form
     </div>
-    <form class="form" onsubmit="register(event); return false">
+    <form class="form" onsubmit="update(); return false">
         <div class="input_field">
             <label>First Name</label>
             <input type="text" id="fname" class="input" name="firstname" placeholder="enter FirstName">
@@ -38,9 +39,12 @@
             <input id="department" type="text" class="input" placeholder="Enter your Department ">
         </div>
         <div class="input_field">
-            <input type="submit" onclick="register();clickButton();"  value="Register" class="btn">
+            <input type="submit" onclick="clickButton();"  value="update" class="btn">
         </div>
     </form>
 </div>
+<body onload="onLoad()">
+    
+</body>
 </html>
-<script> function clickButton(){location.href="dashboard.html"}   </script>
+<script> function clickButton(){location.href="dashboard.html"}</script>

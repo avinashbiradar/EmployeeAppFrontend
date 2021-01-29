@@ -20,7 +20,7 @@ $.ajax({
          <td> ${value.sallary}</td>
          <td> ${value.department}</td>
          
-         <td> <button type="button" class="btn btn-warning"onclick="updateEmployee(${value.id})">Edit</button></td>
+         <td> <button type="button" class="btn btn-warning" onclick="getDataById(${index})">Edit</button></td>
          <td> <button type="button" class="btn btn-danger" onclick="deleteEmployee(${index});return false">Delete</button></td>
          </tr>
          
@@ -28,11 +28,10 @@ $.ajax({
      })
      $('#customers').append(innerHtml)
  },
- error:function(err){
-     console.log("error in " , err);
-   }
-
- })
+    error:function(err){
+        console.log("error in " , err);
+     }
+  })
 
 })
 
@@ -45,12 +44,20 @@ $.ajax({
     url:'http://localhost:3000/api/deleteEmployeeData/'+temp,
     success:function(){
         alert("record deleted ")
-        console.log("result success ", temp); 
+        console.log("result success "); 
+        window.open("http://127.0.0.1:5500/html/dashboard.html?", target = "_self");
     },
     error:function(error){
         alert(error);
     }
    })
-   this.readEmployee();
- 
+}
+
+// Performs edit part and stores id in localStorage
+    getDataById = (id) => {
+        console.log("getDataById" + id)
+        let employeeId = EmpData[id];
+        localStorage.setItem("id", employeeId);
+        console.log("local " + localStorage.getItem("id"))
+        window.open("http://127.0.0.1:5500/html/update.html?", target = "_self");
 }
